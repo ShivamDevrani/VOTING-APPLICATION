@@ -23,7 +23,7 @@ router.post('/candidate',jwtAuthMiddleware,async(req,res)=>{
         });
         await candidate.save();
         console.log('candidate added successfully');
-        res.redirect('/admin/candidate?added=SUCCESS');
+        res.redirect('/admin?added=SUCCESS');
     }catch(err)
     {
          console.log(err);
