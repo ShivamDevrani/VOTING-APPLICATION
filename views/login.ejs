@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+   
+    <div class="supreme">
+        <div id="ob1">
+        </div>
+        <div id="ob2">
+        </div>
+        <div id="ob3">
+        </div>
+        <div id="ob4">
+        </div>
+        <div class="signup">
+        
+            <h1>
+                LOGIN
+            </h1>
+            <form method="post" action="/user/login">
+                <div class="formDiv">
+                    <label for="adhaar">Adhaar Number</label>
+                    <input required type="text" id="adhaar" name="adhaar">
+                   
+                   
+                </div>
+
+                <div class="formDiv">
+                    <label for="password">Password</label>
+                    <input required type="password" id="password" name="password">
+                </div>
+                <% if (locals.error) { %>
+                    <p id="error"><%= locals.error %></p>
+                <% } %>
+                <button>Submit</button>
+
+            </form>
+            <a href="/signup">Don't have an account? <p>Signup</p></a>
+          
+
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

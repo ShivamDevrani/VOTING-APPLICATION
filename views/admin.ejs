@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Admin Panel</title>
+
+
+</head>
+
+<body>
+    <div class="supreme">
+        <nav>
+            <img id="menuBar" src="/images/menu.png" alt="">
+
+
+            <div class="firstBlock">
+                <img src="/images/indianFlag.jpg" alt="error404">
+            </div>
+            <div class="cover">
+                <ul class="secondBlock">
+
+                    <li><a href="/admin/candidate">Add candidate</a></li>
+                    <li><a id="live" href="/admin/candidate/delete">Remove Candidate</a>
+                    <li><a href="/admin/voting">Voting Update</a></li>
+                    </li>
+                    <li> <a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+           
+        </nav>
+
+        <div id="menu">
+            <img id="cross" src="/images/cross.png" alt="">
+            <div id="navContent">
+ 
+                <a href="/admin/candidate">Add candidate</a>
+ 
+                <a id="live" href="/admin/candidate/delete">Remove Candidate</a>
+                <a href="/admin/voting">Voting Update</a>
+                 <a  href="/logout">Logout</a>  
+ 
+ 
+            </div>
+         </div>
+
+        <div class="main">
+            <div class="admin">
+                <h1>HEY ADMIN!</h1>
+                <h2>LIST OF CANDIDATES</h2>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td class="col1 heading">S.NO.</td>
+                        <td class="col2 heading">NAME OF CANDIDATE</td>
+                        <td class="col3 heading">AGE</td>
+                        <td class="col4 heading">PARTY NAME</td>
+                    </tr>
+                    <% if (locals.candidates) { %>
+                        <% candidates.forEach((candidate, index)=> { %>
+                            <tr>
+                                <td class="col1">
+                                    <%= index + 1 %>
+                                </td>
+                                <td class="col2">
+                                    <%= candidate.name %>
+                                </td>
+                                <td class="col3">
+                                    <%= candidate.age %>
+                                </td>
+                                <td class="col4">
+                                    <%= candidate.partyName %>
+                                </td>
+                            </tr>
+                            <% }) %>
+                                <% } %>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+        const menuBar=document.getElementById('menuBar');
+        const menu=document.getElementById('menu');
+        menuBar.addEventListener('click', () => {
+        menu.style.display = 'block'; 
+
+        const cross=document.getElementById('cross');
+        cross.addEventListener('click',()=>{
+            menu.style.display='none';
+        })
+   
+});
+
+    </script>
+
+
+</body>
+
+</html>

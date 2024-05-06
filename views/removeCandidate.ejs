@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/removeCandidate.css">
+</head>
+
+<body>
+    <div class="supreme">
+        <div id="ob1">
+        </div>
+        <div id="ob2">
+        </div>
+        <div id="ob3">
+        </div>
+        <div id="ob4">
+        </div>
+        <div class="signup">
+            <h1>
+                CANDIDATE DETAILS
+            </h1>
+            <form method="post" action="/admin/candidate/delete">
+                <div class="formDiv">
+                    <label for="name">Name</label>
+                    <input required type="text" id="name" name="name" autocomplete="off">
+                </div>
+                <div class="formDiv">
+                    <label for="age">Age</label>
+                    <input required type="number" id="age" name="age">
+                </div>
+                <div class="formDiv">
+                    <label for="partyName">Party Name</label>
+                    <input required type="text" id="partyName" name="partyName">
+                </div>
+                <% if (locals.error) { %>
+                    <p id="error"><%= locals.error %></p>
+                <% } %>
+                <button>REMOVE CANDIDATE</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

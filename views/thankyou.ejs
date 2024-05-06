@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="/css/thankyou.css">
+</head>
+<body>
+    <div class="supreme">
+        <img src="/images/back.png" alt="">
+    </div>
+    <div class="text">
+        <h1>वन्दे मातरम्</h1>
+        <h2>THANK YOU FOR VOTING</h2>
+        <p id="name"><%= locals.name %></p>
+
+        <h3>YOU HAVE BEEN SUCCESSFULLY VOTED ON 
+            <%= locals.date %>
+        </h3>
+        <% if (locals.name) { %>
+            <p>Your Vote has been registered, 
+                Thank you for your participation and saving our Democracy</p>
+        <% } %>
+    </div>
+
+   <script>
+      setTimeout(()=>{
+        window.print();
+      },1000);
+       
+   </script>
+    
+</body>
+</html>

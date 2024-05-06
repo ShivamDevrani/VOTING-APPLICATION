@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+    <div class="supreme">
+        <div id="ob1">
+        </div>
+        <div id="ob2">
+        </div>
+        <div id="ob3">
+        </div>
+        <div id="ob4">
+        </div>
+        <div class="signup">
+            <h1>
+                SIGN UP
+            </h1>
+            <form method="POST" action="/user/signup">
+                <div class="formDiv">
+                    <label for="name">Name</label>
+                    <input required type="text" id="name" name="name">
+                </div>
+                <div class="formDiv">
+                    <label  for="adhaar">Adhaar Number</label>
+                    <input required type="text" id="adhaar" name="adhaar">
+                </div>
+                 
+                <div class="formDiv">
+                    <label for="password">Password</label>
+                    <input required type="password" id="password" name="password">
+                </div>
+                <div class="formDiv">
+                    <label for="invitationKey">Invitation Key <span>(For Admin Role)</span></label>
+                    <input type="text" id="invitationKey" name="invitationKey">
+                </div>
+
+                <% if (locals.error) { %>
+                    <p id="error"><%= locals.error %></p>
+                <% } %>
+
+                <button>Submit</button>
+
+            </form>
+
+            <a href="/login">Already Signed Up? <p>Login</p></a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

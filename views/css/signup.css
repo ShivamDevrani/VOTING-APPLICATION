@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+   width: 100%;
+   height: 100%;
+}
+
+.supreme{
+    width: 100%;
+    min-height: 100%;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+
+    
+}
+
+.signup{
+    position: absolute;
+    z-index: 2;
+
+    min-width: 25%;
+    min-height: 70%;
+    font-family: "Montserrat", sans-serif;
+    padding: 1.5rem;
+    
+
+ background: rgba( 255, 255, 255, 0 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 18px );
+-webkit-backdrop-filter: blur( 18px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+}
+.signup h1{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+    color: rgb(90, 152, 110);
+}
+
+.signup form{
+ 
+  
+    color:grey;
+    padding: 1.1rem;
+    margin-top: 1.2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.signup form button{
+    height: 2rem;
+    width: 70%;
+    
+    font-size: 70%;
+    background-color: #3498db;
+
+    border-radius:1rem;
+    border: none;
+    color:white;
+    cursor: pointer;
+    margin: 2rem auto;
+}
+.signup form button:hover{
+    background-color: #1a4d6e;
+}
+.signup a{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: rgb(96, 93, 93);
+    
+}
+.signup a p{
+    color:rgb(36, 129, 243);
+    display: inline;
+}
+.signup a p:hover{
+    color:darkblue;
+}
+.formDiv{
+    padding: 4px;
+   display: flex;
+   flex-direction: column;
+
+}
+.formDiv input{
+    height: 2rem;
+    border: none;
+    outline: none;  
+    background-color: transparent;
+    border:none;   
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+}
+.formDiv label span{
+    font-size: 1rem;
+}
+#ob1,#ob2,#ob3,#ob4{
+    position:absolute;
+    border-radius: 100%;
+    height:8rem;
+    width: 8rem;
+}
+
+#ob1{
+    top: 15%;
+    left:33%;
+    background-color:rgba(255, 255, 255);
+    
+}
+#ob2{
+    background-color:rgba(255, 255, 255, 0.41);
+    bottom: 8%;
+    z-index:4;
+    right:32%;
+}
+
+#ob3{
+    background-color:  rgba(223, 218, 218);
+    top:15%;
+    right: 33%;
+}
+#ob4{
+    background-color:  rgba(237, 232, 232);
+    bottom: 20%;
+    left: 32%;
+
+}
+#error{
+    font-size: 1rem;
+    color: red;
+    margin-top: 2px;
+    text-align: center;
+}
+
+/* responsive */
+/* tablet */
+@media only screen and (max-width:768px) {
+    
+    .signup{
+       width: 50%;
+        height: 82%;
+        font-family: "Montserrat", sans-serif;
+        padding: 1.5rem;
+      
+    
+    }
+    .signup h1{
+        font-size: 2.5rem;
+    }
+    .signup form{ 
+        padding: 0.5rem;
+        font-size: 1rem;
+        height: 80%;
+    }
+    .signup form span{
+        font-size: 1rem;
+    }
+    .signup form button{
+        height: 1.8rem;
+        width: 70%;
+        font-size: 75%;
+        margin:0 auto;
+    }
+   
+    .signup a{
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        color: rgb(96, 93, 93);
+        margin-top: 4px;
+    }
+    .signup a p{
+        color:rgb(36, 129, 243);
+        display: inline;
+    }
+    #error{
+        font-size: 0.8rem;
+       
+    }
+}
+
+
+/* small size */
+@media only screen and (max-width:540px) {
+    
+    .signup{
+       width: 80%;
+        height: 72%;
+        font-family: "Montserrat", sans-serif;
+        padding: 1.5rem;
+    
+    }
+    .signup h1{
+        font-size: 1.8rem;
+    }
+    .signup form{ 
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        height: 80%;
+    }
+    .signup form span{
+        font-size: 0.8rem;
+    }
+    .signup form button{
+        height: 1.5rem;
+        width: 70%;
+        font-size: 75%;
+        margin:0 auto;
+    }
+   
+    .signup a{
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: "Poppins", sans-serif;
+        color: rgb(96, 93, 93);
+        margin-top: 3px;
+        
+    }
+    .signup a p{
+        color:rgb(36, 129, 243);
+        display: inline;
+    }
+}

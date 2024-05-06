@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting App</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    
+    <div class="supreme">
+        <nav>
+                <img id="menuBar" src="/images/menu.png" alt="">
+           
+            <div class="firstBlock">
+                <img src="/images/indianFlag.jpg" alt="error404">
+            </div>
+            <div class="cover">
+                <ul class="secondBlock">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/shivam-devrani-988162262/">About Us</a></li>
+                    </li>
+                    <li>
+                      
+                        <% if (locals.logout) { %> 
+                            <a id="log" href="/logout">Logout</a>  
+                        <% } else { %> 
+                            <img src="/images/pngegg.png" alt="">
+                            <a id="log" href="/signup">SignUp/Login</a> 
+                        <% } %>  
+                       
+    
+                    </li>
+                </ul>
+              
+            </div>
+           
+        </nav>
+        <div id="menu">
+           <img id="cross" src="/images/cross.png" alt="">
+           <div id="navContent">
+
+            <a href="/">Home</a>
+
+            <a href="">About Us</a>
+
+            <% if (locals.logout) { %> 
+                <a  href="/logout">Logout</a>  
+            <% } else { %> 
+               
+                <a  href="/signup">SignUp/Login</a> 
+            <% } %>  
+
+
+           </div>
+        </div>
+
+        <div class="main">
+        <h1 id="welcome">WELCOME TO VOTING APPLICATION</h1>
+  
+
+        <div class="partial2">
+            <h2 id="quote">Fighting Today For A Better Tomorrow</h2> 
+            <img src="/images/pngegg (1).png" alt="vote404">
+            
+                <a href="/user/vote">VOTE NOW</a>
+           
+        </div>  
+
+        
+
+
+    </div>
+
+    </div>
+    <script>
+        const menuBar=document.getElementById('menuBar');
+        const menu=document.getElementById('menu');
+        menuBar.addEventListener('click', () => {
+        menu.style.display = 'block'; 
+
+        const cross=document.getElementById('cross');
+        cross.addEventListener('click',()=>{
+            menu.style.display='none';
+        })
+   
+});
+
+    </script>
+   
+</body>
+
+</html>

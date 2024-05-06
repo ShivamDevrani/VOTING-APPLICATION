@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+   
+}
+
+.supreme {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgb(34,81,195);
+background: linear-gradient(329deg, rgba(34,81,195,1) 9%, rgba(45,199,253,1) 89%);
+}
+
+nav {
+    height: 9%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    top:1.2%;
+   
+    background: rgba( 4, 51, 101, 0.8 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3px );
+-webkit-backdrop-filter: blur( 3px );
+border-radius: 30px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#menuBar{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+
+.firstBlock {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstBlock img {
+    width: 5.5rem;
+    border-radius: 4px;
+}
+
+.cover{
+    display: flex;
+    width:50%;
+    /* border: 2px black solid; */
+    /* justify-content: space-between; */
+}
+.secondBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.secondBlock a {
+    font-size: 1.2rem;
+    color: white;
+    transition: 0.2s;
+}
+
+.secondBlock a:hover {
+    color: rgb(102, 191, 235);
+}
+
+
+.main{
+    margin-top: 4.5rem;
+    width: 96%;
+    padding: 3rem;
+    
+}
+.admin{
+    padding: 2rem;
+    /* border:3px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.admin h1{
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255)
+   
+}
+
+.admin h2{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    color:rgba(255, 255, 255, 0.693);    
+}
+.content
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    
+}
+table{
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.741);
+    width: 100%;
+
+}
+table tr{
+    height: 6rem;
+}
+
+table,tr,td{
+      border :3px solid rgb(4, 91, 145);
+    border-collapse: collapse;
+}
+.col1,.col2,.col3,.col4{
+    padding: 1.2rem;
+    font-size: 1.6rem;
+
+}
+.col1{
+    text-align: center;
+    width:7%;
+    
+
+}
+.col3{
+    text-align: center;
+    width: 7%;
+}
+.col2{
+    text-align: center;
+    width:43%;
+}
+.col4{
+    text-align: center;
+    width: 43%;
+}
+.heading{
+    padding: 1.8rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media only screen  and (max-width:1250px) {
+    
+    .cover{
+        display: flex;
+        width:60%;
+    
+    }
+    .secondBlock a {
+        font-size: 1rem;
+        color: white;
+        transition: 0.2s;
+    }
+    
+    }
+    
+
+
+@media only screen  and (max-width:850px) {
+    .firstBlock img {
+    width: 4rem;
+    border-radius: 3px;
+}
+
+.cover{
+    /* transform: translateX(-20px); */
+    display: flex;
+    width: 70%;
+    /* border: 2px black solid; */
+    /* justify-content: space-between; */
+}
+.secondBlock a {
+    font-size: 0.8rem;
+    color: white;
+    transition: 0.2s;
+}
+.main{
+    margin-top: 2rem;
+    padding: 2rem;
+    
+}
+.admin{
+    padding: 2rem;
+  
+}
+.admin h1{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255)
+   
+}
+
+.admin h2{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color:rgba(255, 255, 255, 0.693);    
+}
+
+table{
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.741);
+    width: 100%;
+
+}
+table tr{
+    height: 6rem;
+}
+
+table,tr,td{
+      border :3px solid rgb(4, 91, 145);
+    border-collapse: collapse;
+}
+.col1,.col2,.col3,.col4{
+    padding: 1.2rem;
+    font-size: 0.8rem;
+
+}
+
+.heading{
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+}
+
+@media only screen  and (max-width:540px) {
+    .firstBlock  {
+    display: none;
+}
+.secondBlock {
+    display: none;
+}
+
+nav {
+        
+    display: flex;
+    align-items: center;
+   
+}
+#menuBar {
+    filter: invert(90%);
+    display: block;
+    height: 80%;
+    width: 20%; 
+}
+
+#menu{
+    position: absolute;
+    padding: 5px;
+    left: 0;
+    top:1%;
+    width: 97%;
+    left: 2%;
+    height: 98%;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+background: rgba(46, 43, 233, 0.55);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 3.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+#cross{
+    
+    width: 15%;
+    position:relative;
+    left:84%
+}
+ 
+#navContent{
+    margin-top: 5%;
+    width: 100%;
+    height: 60%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction:column;
+    gap: 0.6rem;
+
+}
+
+#navContent a{
+    font-size: 1.4rem;
+    color: #fdfdfee9;
+    font-weight: 500;
+}
+
+
+.main{
+    margin-top: 2rem;
+    padding: 2rem;
+    
+}
+.admin{
+    padding: 2rem;
+  
+}
+.admin h1{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255)
+   
+}
+
+.admin h2{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color:rgba(255, 255, 255, 0.693);    
+}
+
+table{
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.741);
+    width: 100%;    
+
+}
+table tr{
+    height: 6rem;
+}
+
+table,tr,td{
+      border :3px solid rgb(4, 91, 145);
+    border-collapse: collapse;
+}
+.col1,.col2,.col3,.col4{
+    padding: 1rem;
+    font-size: 0.7rem;
+
+}
+
+.heading{
+
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+}
+
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/votingPanel.css">
+    <title>Admin Panel</title>
+     
+
+</head>
+<body>
+   
+        <div class="supreme">
+            <nav>
+                <img id="menuBar" src="/images/menu.png" alt="">
+
+                <div class="firstBlock">
+                    <img src="/images/indianFlag.jpg" alt="error404">
+                </div>
+                <div class="cover">
+                    <ul class="secondBlock">
+                  
+                        <li><a href="/admin/candidate">Add candidate</a></li>
+                        <li><a id="live" href="/admin/candidate/delete">Remove Candidate</a> </li>
+                            <li><a href="/admin">Admin Panel</a></li>
+                            <li> <a href="/logout">Logout</a></li>
+                        
+                      
+                    </ul>
+                </div>
+            </nav>
+            <div id="menu">
+                <img id="cross" src="/images/cross.png" alt="">
+                <div id="navContent">
+     
+                    <a href="/admin/candidate">Add candidate</a>
+     
+                    <a id="live" href="/admin/candidate/delete">Remove Candidate</a>
+                   <a href="/admin">Admin Panel</a>
+                     <a  href="/logout">Logout</a>  
+     
+                </div>
+             </div>
+     
+
+                <div class="main">
+                    <div class="content1">
+                      <div class="box">
+                       <h2> Total Registered:</h2>
+                        <h3><%= locals.totalUsers %></h3>
+                      </div>
+                      <div class="box">
+                        <h2>Total Votes Registered:</h2>
+                        <h3><%= locals.totalVotes.length %></h3>
+                      </div>
+                      <div class="box">
+                        <h2>Total Candidates: </h2>
+                        <h3> <%= locals.totalCandidates %> </h3>
+                      </div>
+                    </div>
+                    <h1 id="leader">LEADER BOARD</h1>
+                    <div class="content2">
+                        <table>
+                            <tr>
+                                <td class="col1 heading">S.NO.</td>
+                                <td class="col2 heading">Party</td>
+                                <td class="col3 heading">Votes</td>
+                             
+                            </tr>
+                           <% if (locals.votes) { %>
+                            <% votes.forEach((candi,index) => { %>
+                               <tr>
+
+                                <td class="col1"> <%= index+1 %></td>
+                                <td class="col2"><%=candi.partyName%> </td>
+                                <td class="col3"> <%= candi.votes %></td>
+
+                               </tr>
+                            <% }) %>
+                           <% } %>
+
+                        </table>
+                    </div>
+                     <h1 id="leader">LIVE VOTING</h1>
+                    <div class="content3">
+                       
+                        <table>
+                            <tr>
+                                <td class="vote1 heading1">S.NO.</td>
+                                <td class="vote2 heading1">Party Name</td>
+                                <td class="vote3 heading1">User Id</td>
+                                <td class="vote4 heading1">Voted At</td>
+                             
+                            </tr>
+                            <% if (locals.totalVotes) { %>
+                               <% totalVotes.forEach((vote,index) => { %>
+                                  <tr>
+                                       <td class="vote1"><%= index+1 %></td>
+                                       <td class="vote2"><%= vote.partyName %></td>
+                                       <td class="vote3"><%= vote.user %></td>
+                                       <td class="vote4"><%= vote.VotedAt %></td>
+                                  </tr>
+                               <% }) %>
+                            <% } %>
+                          
+                       
+                        </table>
+
+
+                    </div>
+                 </div>  
+         
+                
+                
+            </div>
+            <script>
+                const body=document.getElementsByTagName('body');
+                const menuBar=document.getElementById('menuBar');
+                const menu=document.getElementById('menu');
+                menuBar.addEventListener('click', () => {
+                menu.style.display = 'block'; 
+                body.style.overflow='hidden';
+                
+        });
+        const cross=document.getElementById('cross');
+                cross.addEventListener('click',()=>{
+                    menu.style.display='none';
+                   
+                })
+           
+        
+            </script>    
+    
+    
+</body>
+</html>
