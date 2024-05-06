@@ -482,3 +482,8 @@ table,tr,td{
 }
 
 }
+
+
+a{
+    text-decoration: none;
+}
