@@ -1,5 +1,9 @@
 # Voting Application
 
+## Admin Login Key
+To access the admin controls, use the following key:
+- **Admin Login Key**: 4154
+
 Welcome to the Voting Application GitHub repository! This project is designed to create a simple voting application with user authentication, admin controls, and real-time voting information. This README file will guide you through the application's features, installation steps, technologies used, and additional information.
 
 ## Features
