@@ -27,18 +27,4 @@ This project is built using the following technologies:
 
 These technologies provide the backbone for our application, allowing it to function efficiently and deliver a smooth user experience.
 
-## Installation
 
-Follow these steps to set up and run the Voting Application on your local machine.
-
-### Prerequisites
-
-- Node.js and npm (Node Package Manager) installed on your machine.
-- A database system such as MongoDB, PostgreSQL, or MySQL (depending on the application’s configuration).
-- Git installed on your machine.
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/your-username/voting-application.git
-cd voting-application
